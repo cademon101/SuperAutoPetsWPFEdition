@@ -18,8 +18,33 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
- 
+        
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="AliceBlue"/>
+        <Grid Grid.Row="0" Grid.Column="1" Background="Aquamarine">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="{Binding CurrentPlayer.HP}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Gold:"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Score:"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Score}"/>
+			<Button Grid.Row="6" Grid.Column="1" Content="Add Gold" Click="ButtonBase_OnClick"></Button>
+
+        </Grid>
         <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Game Screen" Background="Beige"/>
         <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="BurlyWood"/>
         <Label Grid.Row="2" Grid.Column="1" Content="Shop" Background="Lavender"/>
