@@ -1,7 +1,7 @@
 ﻿using System;
 namespace EngineSAP.Models
 {
-    public class Emoji
+    public abstract class Emoji
     {
         public string Name { get; private set; }
         public string Icon { get; private set; }
@@ -15,6 +15,6 @@ namespace EngineSAP.Models
             Name = name;
 
         }
-        //[][todo] we need base methods
+
     }
 }

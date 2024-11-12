@@ -11,7 +11,7 @@
                 CurrentPlayer = new Player();
                 CurrentPlayer.Gold = 10;
                 CurrentPlayer.Score = 0;
-                CurrentPlayer.HP = "❤❤❤❤❤❤❤❤❤❤"; //[][todo] System for dynamicly changing the hearts
+                //CurrentPlayer.HP =  //[][todo] System for dynamicly changing the hearts
                 
             }
         }

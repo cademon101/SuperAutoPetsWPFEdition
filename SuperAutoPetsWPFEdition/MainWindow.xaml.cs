@@ -28,7 +28,7 @@ namespace SuperAutoPetsWPFEdition
         }
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            _gameSession.CurrentPlayer.Gold = _gameSession.CurrentPlayer.Gold + 10;
+            _gameSession.CurrentPlayer.SubtractHeart();
         }
 
     }

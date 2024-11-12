@@ -42,7 +42,7 @@
             <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}"/>
             <Label Grid.Row="3" Grid.Column="0" Content="Score:"/>
             <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Score}"/>
-			<Button Grid.Row="6" Grid.Column="1" Content="Add Gold" Click="ButtonBase_OnClick"></Button>
+			<Button Grid.Row="6" Grid.Column="1" Content="Lose a Round" Click="ButtonBase_OnClick"></Button>
 
         </Grid>
         <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Game Screen" Background="Beige"/>
