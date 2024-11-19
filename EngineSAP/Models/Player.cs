@@ -11,8 +11,8 @@ namespace EngineSAP.Models
         int gold { get; set; } //[][toLearn] there's some sort of encapslation thing with this
         int score { get; set; }
         string[] hP { get; set; }
-        private int lossCounter = 10; 
-
+        private int lossCounter = 10;
+        //private int Team;
         public string Name
         {
             get { return name; }
@@ -49,12 +49,12 @@ namespace EngineSAP.Models
                 OnPropertyChanged("HP");
             }
         }
-        List<Emoji> PlayerTeam { get; set; }
+        //List<Emoji> PlayerTeam { get; set; } [][todo] fix this 
 
         public Player() //[][todo] have an event handler for this too!
         {
             hP = ["❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️"];
-            PlayerTeam = new List<Emoji>();
+            //PlayerTeam = new List<Emoji>(); [][todo] fix this as well 
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
