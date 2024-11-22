@@ -46,7 +46,6 @@ namespace EngineSAP.Models
         public Emoji(string name) //future implimtation public Miner() : base("Miner") { }
         {
             Name = name;
-
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)

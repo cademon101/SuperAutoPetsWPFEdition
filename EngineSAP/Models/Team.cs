@@ -5,10 +5,6 @@ namespace EngineSAP.Models
     public class Team
     {
         ObservableCollection<Emoji> EmojiTeam = new ObservableCollection<Emoji>();
-        public Team()
-        {
-
-        }
         void AddTeamMember(Emoji newEmoji)
         {
             if (EmojiTeam.Count >= 5)
@@ -35,6 +31,5 @@ namespace EngineSAP.Models
             EmojiTeam[index1] = EmojiTeam[index2];
             EmojiTeam[index2] = tempMember;
         }
-
     }
 }

@@ -12,7 +12,8 @@ namespace EngineSAP.Models
         int score { get; set; }
         string[] hP { get; set; }
         private int lossCounter = 10;
-        //private int Team;
+        public Team team = new Team();
+        
         public string Name
         {
             get { return name; }
@@ -54,7 +55,7 @@ namespace EngineSAP.Models
         public Player() //[][todo] have an event handler for this too!
         {
             hP = ["❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️", "❤️"];
-            //PlayerTeam = new List<Emoji>(); [][todo] fix this as well 
+            team = new Team();
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
