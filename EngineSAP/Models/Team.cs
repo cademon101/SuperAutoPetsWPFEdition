@@ -5,7 +5,7 @@ namespace EngineSAP.Models
     public class Team
     {
         ObservableCollection<Emoji> EmojiTeam = new ObservableCollection<Emoji>();
-        void AddTeamMember(Emoji newEmoji)
+        public void AddTeamMember(Emoji newEmoji)
         {
             if (EmojiTeam.Count >= 5)
             {
@@ -21,11 +21,11 @@ namespace EngineSAP.Models
                 EmojiTeam.Add(newEmoji);
             }
         }
-        void SubtractMember(Emoji emojiToSubtract)
+        public void SubtractMember(Emoji emojiToSubtract)
         {
             EmojiTeam.Remove(emojiToSubtract);
         }
-        void SwapMembers(int index1, int index2)
+        public void SwapMembers(int index1, int index2)
         {
             var tempMember = EmojiTeam[index1];
             EmojiTeam[index1] = EmojiTeam[index2];

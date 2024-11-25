@@ -7,12 +7,13 @@ namespace EngineSAP.Models
 {
     public abstract class Emoji : INotifyPropertyChanged
     {
-        public string Name { get; private set; }
-        public string Icon { get; private set; }
+        public string Name { get; set; } //toresearch[][R]
+        public string Icon { get; set; }
         public int atk { get; set; }
         private int hp { get; set; }
         private int cost = 3;
         private int level = 1;
+        public bool isAlive = true;
 
         public int Atk
         {
@@ -41,11 +42,20 @@ namespace EngineSAP.Models
                 OnPropertyChanged("Atk");
             }
         }
+        public bool IsAlive
+        {
+            get { return isAlive; }
+            set
+            {
+                isAlive = value;
+                OnPropertyChanged($"{nameof(IsAlive)}");
+            }
+        }
 
-
-        public Emoji(string name) //future implimtation public Miner() : base("Miner") { }
+        public Emoji(string name, string icon, int hp, int atk) //future implimtation public Miner() : base("Miner") { }
         {
             Name = name;
+            Icon = icon;
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
@@ -57,12 +67,24 @@ namespace EngineSAP.Models
         { 
             hp =- damage;
             OnPropertyChanged("Hp");
+            if (hp <= 0) 
+            {
+                isAlive=false;
+                OnPropertyChanged("IsAlive");
+            }
+        }
+        public void healDamage(int toHeal)
+        {
+            hp =+ toHeal;
+            OnPropertyChanged("Hp");
         }
         public void LevelUp() 
         {
-        //fill this out later
+            level++;
+            onLevelUp();
         }
-
+        public abstract void onLevelUp();
+        public abstract void ability();
 
     }
 }
